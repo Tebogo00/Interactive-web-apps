@@ -33,3 +33,8 @@ if (date === 2050) {
 console.log('Your status is:', status);
 console.log('The year is:', date);
 console.log('The total holidays is:', count);
+
+//replaced const with let on line 3 so that 0 must not be constant, it changes
+//edited let count for additonal assignment
+//added semi-colons in my all my code
+//added "===" so that it can export when you console
