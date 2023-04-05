@@ -19,12 +19,12 @@ if (location === 'RSA') {
   shipping = 400;
 }else
 
-if (location = 'NAM') {
+if (location === 'NAM') {
 shipping = 600;
 }else
 
-if (location = 'NK') {
-console.log(WARNING);
+if (location === 'NK') {
+console.log(BANNED_WARNING);
 }else{
   shipping = 800;
 }
