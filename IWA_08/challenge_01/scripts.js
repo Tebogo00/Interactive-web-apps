@@ -41,4 +41,9 @@ const sarah = {
 console.log(leo, leo.address.postalcode);
 console.log(sarah, sarah.address.postalcode);
 
+//postal code used camelcase
+//accessid was a number and made it an string
+//they used = instead of colons for assigning keys
+//
+
 

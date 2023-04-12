@@ -17,3 +17,6 @@ const total = `Total amount owed: R ${(parseFloat(leoBalance) + parseFloat(sarah
 const result = `\n${leo}${sarah}${divider}\n${total}${divider}`;
 
 console.log(result);
+
+//added escape sequences
+//added parsefloat so that itcan float
