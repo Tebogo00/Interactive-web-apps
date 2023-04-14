@@ -69,7 +69,7 @@ const overdue = book1.checkin
 const reserveCheckout = overdue.style.color = ''
 
 const reserved = book2.checkin
-const reserveCheckin = overdue.style.color = ''
+const reserveCheckin = reserved.style.color = ''
 
 const shelf = book3.checkin
 const checkIn = shelf.style.color = ''
