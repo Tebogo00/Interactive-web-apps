@@ -1,39 +1,52 @@
-const root1 = document.querySelector('[data-key="order1"]');        // 1 to one
-const biscuit1 = parseInt(root1.getAttribute('data-biscuits')); // get Attribute
-const donut1  = parseInt(root1.getAttribute('data-donuts'));   //used parseInt for calculations
-const pancake1  = parseInt(root1.getAttribute('data-pancakes'));
-const status1  = root1.getAttribute('data-delivered') === "true" ? "Delivered" : "Pending";
-const one = document.querySelector('h2');   
-
-                      //order 2 to order 1
-document.querySelector('dd').innerText = biscuit1
-document.querySelector('.donuts dd').innerText = donut1
-document.querySelector('.pancakes dd').innerText = pancake1
-document.querySelector('.status dd').innerText = status1
+// the variable names cannot start with a number so I changed the order of the number to the end of a variable.
+// added the querySelector() to select elements by their class names and data-key attributes.
+// There is a change in variable naming conventions like `root1`, `biscuits1` to make the variable names more descriptive and meaningful.
+// added ('.biscuits .count') to select the relevant elements within the HTML document.
+const root1 = document.querySelector('[data-key="order1"]');
+const biscuits1 = root1.querySelector('.biscuits .count');
+const donuts1 = root1.querySelector('.donuts .count');
+const pancakes1 = root1.querySelector('.pancakes .count');
+const status1 = root1.querySelector('.status dd');
 
 const root2 = document.querySelector('[data-key="order2"]');
-const biscuit2 = parseInt(root2.getAttribute('data-biscuits'));
-const donut2  = parseInt(root2.getAttribute('data-donuts'));
-const pancake2  = parseInt(root2.getAttribute('data-pancakes'));
-const status2  = root2.getAttribute('data-delivered') === "true" ? "Delivered" : "Pending";//added tenery operator (? :) is used to check the value of the 'data delivered' attribite and set the text content accordingly.
+const biscuits2 = root2.querySelector('.biscuits .count');
+const donuts2 = root2.querySelector('.donuts .count');
+const pancakes2 = root2.querySelector('.pancakes .count');
+const status2 = root2.querySelector('.status dd');
 
-//order 2
-document.querySelectorAll('.biscuits dd')[1].innerText = biscuit2
-document.querySelectorAll('.donuts dd')[1].innerText = donut2
-document.querySelectorAll('.pancakes dd')[1].innerText = pancake2
-document.querySelectorAll('.status dd')[1].innerText = status2
-
-//order 3
 const root3 = document.querySelector('[data-key="order3"]');
-const biscuit3 = parseInt(root3.getAttribute('data-biscuits'));
-const donut3  = parseInt(root3.getAttribute('data-donuts'));
-const pancake3  = parseInt(root3.getAttribute('data-pancakes'));
-const status3 = root3.getAttribute('data-delivered') === "true" ? "Delivered" : "Pending";
+const biscuits3 = root3.querySelector('.biscuits .count');
+const donuts3 = root3.querySelector('.donuts .count');
+const pancakes3 = root3.querySelector('.pancakes .count');
+const status3 = root3.querySelector('.status dd');
 
-document.querySelectorAll('.biscuits dd')[2].innerText = biscuit3
-document.querySelectorAll('.donuts dd')[2].innerText = donut3
-document.querySelectorAll('.pancakes dd')[2].innerText = pancake3
-document.querySelectorAll('.status dd')[2].innerText =status3
 
-//added tenery operator (? :) is used to check the value of the 'data delivered' attribite and set the text content accordingly.
-//added the 'getAttribute' property to set of the element based on the corresponding data attributes.
+// added the textContent property to set the values of the elements based on the corresponding data attributes.
+// added ternary operator (? : ) is used to check the value of the "data-delivered" attribute and set the text content accordingly.
+// added  the textContent property to each of the variables to set to the value of a corresponding data-* attribute on the root element.
+/* The dataset property is used to access the data attributes, and the ternary operator is used to set the text content
+of the status variables based on the value of the data-delivered attribute.
+*/
+biscuits1.textContent = root1.dataset.biscuits;
+donuts1.textContent = root1.dataset.donuts;
+pancakes1.textContent = root1.dataset.pancakes;
+status1.textContent = root1.dataset.delivered === "true" ? "Delivered" : "Pending";
+
+biscuits2.textContent = root2.dataset.biscuits;
+donuts2.textContent = root2.dataset.donuts;
+pancakes2.textContent = root2.dataset.pancakes;
+status2.textContent = root2.dataset.delivered === "true" ? "Delivered" : "Pending";
+
+biscuits3.textContent = root3.dataset.biscuits;
+donuts3.textContent = root3.dataset.donuts;
+pancakes3.textContent = root3.dataset.pancakes;
+status3.textContent = root3.dataset.delivered === "true" ? "Delivered" : "Pending";
+
+
+
+
+
+
+
+
+
