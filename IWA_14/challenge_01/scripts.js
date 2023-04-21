@@ -1,4 +1,4 @@
-const firstName = 'John';
+const name = 'John';
 const age = 35;
 const hobby = 'Coding';
 
