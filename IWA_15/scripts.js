@@ -1,5 +1,4 @@
-// scripts.js
-//create an object with nested arrays containing some data.
+//Object with nested arrays containing some data.
 const data = {
 	lists: [
 		['first', [15, 11, 13, 7, 5]],
@@ -9,6 +8,7 @@ const data = {
 }
 
 // Only edit below
+
 //extract each of the three arrays into separate variables for easier access
 const first = data.lists[0][1]
 const second = data.lists[1][1]
