@@ -14,6 +14,8 @@ const MONTHS = [
 ]
 const getDaysInMonth = (date) => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
 // Only edit below
+
+//This code creates an array of numbers from 0 to a specified length.
 const createArray = (length) => {
     const result = [];
     for (let i = 0; i < length; i++) {
@@ -21,6 +23,8 @@ const createArray = (length) => {
     }
     return result;
 };
+
+//the code create empty array for weeks, days and results
 const createData = function(){
     const current = new Date();
     current.setDate(1);
@@ -29,6 +33,9 @@ const createData = function(){
     const weeks = createArray(6);
     const days = createArray(7);
      let result = [] //value = null
+     
+
+     //loop through each week and day, and create an object for each day
     for (let weekIndex = 0; weekIndex < weeks.length; weekIndex++) {
         let value = {
             week: weekIndex + 1,
@@ -51,9 +58,11 @@ const createData = function(){
         }
         return weeks;
 };
+
 const addCell = function(existing, classString, value) {
     return `${existing}<td class="${classString}">${value}</td>`;
 };
+
 const createHtml = function(data) {
     let result = '';
     for (let i = 0; i < data.length; i++) {
@@ -82,6 +91,8 @@ const createHtml = function(data) {
     }
     return result;
   };
+
+
 // Only edit above
 const current = new Date()
 document.querySelector('[data-title]').innerText = `${MONTHS[current.getMonth()]} ${current.getFullYear()}`
